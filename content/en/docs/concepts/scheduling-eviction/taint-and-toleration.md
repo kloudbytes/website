@@ -43,6 +43,12 @@ To remove the taint added by the command above, you can run:
 kubectl taint nodes node1 key1=value1:NoSchedule-
 ```
 
+Instead of that 
+
+```shell
+kubectl taint nodes node1 key1-
+```
+
 You specify a toleration for a pod in the PodSpec. Both of the following tolerations "match" the
 taint created by the `kubectl taint` line above, and thus a pod with either toleration would be able
 to schedule onto `node1`:
